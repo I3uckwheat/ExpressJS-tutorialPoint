@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+app.all("/test", (req, res) => {
+  res.send("HTTP method does not have any effect on this route");
+})
+
 app.get('/hello', (req, res) => {
   res.send("Hello World!");
 });
